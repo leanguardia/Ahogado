@@ -1,6 +1,7 @@
 language: ruby
 rvm:
-  - 2.0.0-p247
+- 2.0.0-p247
+# uncomment this line if your project needs to run something other than `rake`:
 script:
   - bundle exec cucumber
   - bundle exec rspec
