@@ -11,6 +11,10 @@ Webrat.configure do |config|
   config.mode = :rack
 end
 
+def current_path
+  URI.parse(current_url).path
+end
+
 class MyWorld
   include Rack::Test::Methods
   include Webrat::Methods
