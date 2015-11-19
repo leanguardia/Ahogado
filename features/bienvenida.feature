@@ -1,14 +1,14 @@
 Feature: Bienvenida
-  Scenario: Ahorcado
-    Given estando en la pantalla inicial
-    Then deberia mostrarse "Bienvenido a Ahorcado" en un header "bienvenida"
+  Scenario: Mostrar Bienvenida
+    Given estando en la pantalla principal
+    Then deberia mostrarse "Bienvenido"
     And deberia mostrarse un boton "jugar" que sirva para iniciar un juego
 
-  Scenario: Jugar
-    Given estando en la pantalla inicial
+  Scenario: Iniciar Juego
+    Given estando en la pantalla principal
     When hago click en el boton "jugar"
-    Then deberia redirigirme a una la direccion "/jugar"
+    Then deberia mostrarme la pantalla de juego
 
-    Scenario: Portada
-      Given estando en la pantalla inicial
-      Then deberia mostrarse una imagen atractiva propia del juego "frasco.jpg"
+    Scenario: Mostrar imagen de Portada
+      Given estando en la pantalla principal
+      Then deberia mostrarse una imagen atractiva propia del juego "jar.png"

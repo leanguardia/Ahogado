@@ -4,6 +4,6 @@ get '/' do
 	erb :main
 end
 
-get '/jugar' do
+get '/game' do
 	erb :game
 end
