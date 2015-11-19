@@ -18,3 +18,7 @@ end
 Then(/^deberia redirigirme a una la direccion "([^"]*)"$/) do |url|
   current_url == url
 end
+
+Then(/^deberia mostrarse una imagen atractiva propia del juego"(.*?)"$/) do |image_name|
+     last_response.should have_xpath("//img[@src=\"/public/images/#{image_name}\"]")
+end

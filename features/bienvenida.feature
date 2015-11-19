@@ -8,3 +8,7 @@ Feature: Bienvenida
     Given estando en la pantalla inicial
     When hago click en el boton "jugar"
     Then deberia redirigirme a una la direccion "/jugar"
+
+    Scenario: Portada
+      Given estando en la pantalla inicial
+      Then deberia mostrarse una imagen atractiva propia del juego "frasco.jpg"

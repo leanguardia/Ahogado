@@ -70,6 +70,3 @@ DEPENDENCIES
   simplecov-console
   sinatra
   webrat
-
-BUNDLED WITH
-   1.10.6
