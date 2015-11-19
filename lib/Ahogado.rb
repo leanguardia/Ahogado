@@ -3,6 +3,7 @@ class Ahogado
   @palabra
   @letras
   @intentos
+  @mensaje
 
   def initialize
     @intentos = 8
@@ -39,6 +40,10 @@ class Ahogado
     @letras.split('').join(' ')
   end
 
+  def mostrar_mensaje
+    @mensaje
+  end
+
   def coincide letra
     resp = false
     @palabra.split('').each_with_index do |l,i|
@@ -48,6 +53,36 @@ class Ahogado
       end
     end
     return resp
+  end
+
+  def adivino?
+    @letras == @palabra
+  end
+
+  def finalizo?
+    if @intentos == 0
+      @mensaje = "PERDISTE"
+      return true
+    end
+    if adivino?
+      @mensaje = "GANASTE"
+      return true
+    end
+    return false
+  end
+
+  def procesar_letra letra
+    if coincide letra
+      @mensaje = "BIEN"
+  	else
+  		perder_intento
+      @mensaje = "MAL"
+  	end
+    if finalizo?
+      return true
+    else
+      return false
+    end
   end
 
   def perder_intento

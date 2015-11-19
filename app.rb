@@ -24,6 +24,6 @@ get '/:letter' do
 		@mensaje = "MAL"
   end
 	@@abecedario[params[:letter].to_sym] = true
-  puts @@abecedario[params[:letter].to_sym]
+	@acabo = @@ahogado.procesar_letra params[:letter]
 	erb :game
 end
