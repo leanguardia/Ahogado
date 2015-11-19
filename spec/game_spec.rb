@@ -62,4 +62,29 @@ describe 'ahogado' do
     expect(@ahogado.mostrar_en_vista).to eq("_ _ _ _")
   end
 
+  it "dada la palabra 'GATO' e ingrese 'G A T O' se muestra un mensaje de victoria " do
+    @ahogado.set_palabra "GATO"
+    @ahogado.procesar_letra 'T'
+    @ahogado.procesar_letra 'G'
+    @ahogado.procesar_letra 'A'
+    @ahogado.procesar_letra 'O'
+    expect(@ahogado.mostrar_mensaje).to eq("GANASTE")
+
+  end
+
+  it "dado que mis intentos son 0 se muestra mensaje 'PERDISTE' " do
+    @ahogado.set_palabra "GATO"
+    @ahogado.procesar_letra "Z"
+    @ahogado.procesar_letra "X"
+    @ahogado.procesar_letra "C"
+    @ahogado.procesar_letra "V"
+    @ahogado.procesar_letra "B"
+    @ahogado.procesar_letra "N"
+    @ahogado.procesar_letra "E"
+    @ahogado.procesar_letra "Q"
+    expect(@ahogado.mostrar_mensaje).to eq("PERDISTE")
+  end
+
+  
+
 end

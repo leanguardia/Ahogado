@@ -10,7 +10,12 @@
 		<br>
 		<h3>Intentos restantes: <%=@@ahogado.get_intentos %></h3>
 		<br>
-		<%=@mensaje%>
+		<%=@@ahogado.mostrar_mensaje%>
+		<br><br><br>
+		<% if @acabo %>
+			<a class="btn btn-success btn-lg" href="/">Ir a Pagina Principal</a>
+		<%end%>
+
 	</div>
 
 	<div class="col-md-7">
@@ -23,33 +28,34 @@
 	</div>
 
 	<div class="col-md-6">
-
-		<a href="A" class="btn btn-lg btn-default">A</a>
-		<a href="B" class="btn btn-lg btn-default">B</a>
-		<a href="C" class="btn btn-lg btn-default">C</a>
-		<a href="D" class="btn btn-lg btn-default">D</a>
-		<a href="E" class="btn btn-lg btn-default">E</a>
-		<a href="F" class="btn btn-lg btn-default">F</a>
-		<a href="G" class="btn btn-lg btn-default">G</a>
-		<a href="H" class="btn btn-lg btn-default">H</a>
-		<a href="I" class="btn btn-lg btn-default">I</a>
-		<a href="J" class="btn btn-lg btn-default">J</a>
-		<a href="K" class="btn btn-lg btn-default">K</a>
-		<a href="L" class="btn btn-lg btn-default">L</a>
-		<a href="M" class="btn btn-lg btn-default">M</a>
-		<a href="N" class="btn btn-lg btn-default">N</a>
-		<a href="O" class="btn btn-lg btn-default">O</a>
-		<a href="P" class="btn btn-lg btn-default">P</a>
-		<a href="Q" class="btn btn-lg btn-default">Q</a>
-		<a href="R" class="btn btn-lg btn-default">R</a>
-		<a href="S" class="btn btn-lg btn-default">S</a>
-		<a href="T" class="btn btn-lg btn-default">T</a>
-		<a href="U" class="btn btn-lg btn-default">U</a>
-		<a href="V" class="btn btn-lg btn-default">V</a>
-		<a href="W" class="btn btn-lg btn-default">W</a>
-		<a href="X" class="btn btn-lg btn-default">X</a>
-		<a href="Y" class="btn btn-lg btn-default">Y</a>
-		<a href="Z" class="btn btn-lg btn-default">Z</a>
+		<% unless @acabo %>
+			<a href="A" class="btn btn-lg btn-default">A</a>
+			<a href="B" class="btn btn-lg btn-default">B</a>
+			<a href="C" class="btn btn-lg btn-default">C</a>
+			<a href="D" class="btn btn-lg btn-default">D</a>
+			<a href="E" class="btn btn-lg btn-default">E</a>
+			<a href="F" class="btn btn-lg btn-default">F</a>
+			<a href="G" class="btn btn-lg btn-default">G</a>
+			<a href="H" class="btn btn-lg btn-default">H</a>
+			<a href="I" class="btn btn-lg btn-default">I</a>
+			<a href="J" class="btn btn-lg btn-default">J</a>
+			<a href="K" class="btn btn-lg btn-default">K</a>
+			<a href="L" class="btn btn-lg btn-default">L</a>
+			<a href="M" class="btn btn-lg btn-default">M</a>
+			<a href="N" class="btn btn-lg btn-default">N</a>
+			<a href="O" class="btn btn-lg btn-default">O</a>
+			<a href="P" class="btn btn-lg btn-default">P</a>
+			<a href="Q" class="btn btn-lg btn-default">Q</a>
+			<a href="R" class="btn btn-lg btn-default">R</a>
+			<a href="S" class="btn btn-lg btn-default">S</a>
+			<a href="T" class="btn btn-lg btn-default">T</a>
+			<a href="U" class="btn btn-lg btn-default">U</a>
+			<a href="V" class="btn btn-lg btn-default">V</a>
+			<a href="W" class="btn btn-lg btn-default">W</a>
+			<a href="X" class="btn btn-lg btn-default">X</a>
+			<a href="Y" class="btn btn-lg btn-default">Y</a>
+			<a href="Z" class="btn btn-lg btn-default">Z</a>
+		<%end%>
 
 	</div>
 

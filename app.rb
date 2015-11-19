@@ -12,11 +12,6 @@ get '/game' do
 end
 
 get '/:letter' do
-	if @@ahogado.coincide(params[:letter])
-		@mensaje = "BIEN"
-	else
-		@@ahogado.perder_intento
-		@mensaje = "MAL"
-	end
+	@acabo = @@ahogado.procesar_letra params[:letter]
 	erb :game
 end
