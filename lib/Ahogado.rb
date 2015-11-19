@@ -1,10 +1,15 @@
-class Ahorcado
+class Ahogado
 
   @palabra
   @letras
+  @intentos
 
-  def intentos
-    8
+  def initialize
+    @intentos = 8
+  end
+
+  def get_intentos
+    @intentos
   end
 
   def set_palabra palabra
@@ -22,7 +27,7 @@ class Ahorcado
   end
 
   def seleccionar_palabra
-    @palabra = "PERRO"
+    @palabra = "ONOMATOPEYA"
     set_letras
   end
 
@@ -43,6 +48,10 @@ class Ahorcado
       end
     end
     return resp
+  end
+
+  def perder_intento
+    @intentos -= 1
   end
 
 end
