@@ -1,3 +1,4 @@
+
 .geometry-texture{
     background-image: url('/images/geometry-texture.png');
 }
@@ -8,4 +9,24 @@
 
 .congruent-pentagon-texture{
     background-image: url('/images/congruent-pentagon-texture.png');
+}
+
+.red-background
+{
+	background-color: red;
+}
+
+.blue-background
+{
+	background-color: blue;
+}
+
+.green-background
+{
+	background-color: green;
+}
+
+.yellow-background
+{
+	background-color: yellow;
 }
