@@ -11,5 +11,5 @@ Then(/^deberia mostrarse un conjunto de "([^"]*)" que represente las letras de l
 end
 
 Then(/^deberia mostrar "([^"]*)" intentos restantes en el label "([^"]*)"$/) do |intentos, label|
-  find_field("#{label}").value.should == intentos
+  pending
 end
