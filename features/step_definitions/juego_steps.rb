@@ -13,3 +13,7 @@ end
 Then(/^deberia mostrar "([^"]*)" intentos restantes en el label "([^"]*)"$/) do |intentos, label|
   pending
 end
+
+Then(/^deberia mostrarse el boton "([^"]*)"$/) do |letra|
+  expect(last_response).to have_xpath("//a[@href=\"#{letra}\"]")
+end
