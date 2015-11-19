@@ -10,9 +10,6 @@ Then(/^deberia mostrarse un conjunto de "([^"]*)" que represente las letras de l
   expect(last_response.body) =~/#{underscore}/m
 end
 
-Then(/^deberia mostrar (\d+) intentos restantes$/) do |tries|
-  #puts last_response.body
-
-  #expect(@browser.label(:text => text).exist?).to eq(true)
-  expect(last_response.body) =~/#{tries}/m
+Then(/^deberia mostrar "([^"]*)" intentos restantes en el label "([^"]*)"$/) do |intentos, label|
+  pending
 end

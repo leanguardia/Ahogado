@@ -6,6 +6,8 @@ Sinatra::Application.app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.
 require 'rspec/expectations'
 require 'rack/test'
 require 'webrat'
+# require 'capybara/node/finders'
+# require 'capybara'
 
 Webrat.configure do |config|
   config.mode = :rack
@@ -15,6 +17,7 @@ class MyWorld
   include Rack::Test::Methods
   include Webrat::Methods
   include Webrat::Matchers
+  # include Capybara::Node::finders
 
   Webrat::Methods.delegate_to_session :response_code, :response_body
 
