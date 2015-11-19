@@ -1,10 +1,6 @@
 Feature: Juego
-  Scenario: Iniciar
+  Scenario: Iniciar juego
     Given estando en la pantalla de jugar
-    When hago click en un boton "empezar"
-    Then deberia mostrarse un label "palabra" que tenga solo barras bajas
-
-#  Scenario: Jugar
-#    Given estando en la pantalla inicial
-#    When hago click en el boton "jugar"
-#    Then deberia redirigirme a una la direccion "/jugar"
+    Then deberia mostrarse un conjunto de "_" que represente las letras de la palabra que tengo que elegir
+    And deberia mostrarse una imagen inicial del ahogado "jar.png"
+    And deberia mostrar 8 intentos restantes
