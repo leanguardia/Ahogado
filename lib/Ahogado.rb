@@ -28,7 +28,7 @@ class Ahogado
   end
 
   def seleccionar_palabra
-    @palabra = "ONOMATOPEYA"
+    @palabra = 'ONOMATOPEYA'
     set_letras
   end
 
@@ -47,12 +47,12 @@ class Ahogado
   def coincide letra
     resp = false
     @palabra.split('').each_with_index do |l,i|
-      if l==letra
+      if l == letra
         @letras[i] = letra.capitalize
         resp = true
       end
     end
-    return resp
+    resp
   end
 
   def adivino?
@@ -61,27 +61,27 @@ class Ahogado
 
   def finalizo?
     if @intentos == 0
-      @mensaje = "PERDISTE"
+      @mensaje = 'PERDISTE'
       return true
     end
     if adivino?
-      @mensaje = "GANASTE"
+      @mensaje = 'GANASTE'
       return true
     end
-    return false
+    false
   end
 
   def procesar_letra letra
     if coincide letra
-      @mensaje = "BIEN"
+      @mensaje = 'BIEN'
   	else
   		perder_intento
-      @mensaje = "MAL"
+      @mensaje = 'MAL'
   	end
     if finalizo?
-      return true
+      true
     else
-      return false
+      false
     end
   end
 

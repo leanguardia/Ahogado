@@ -30,3 +30,7 @@
 {
 	background-color: yellow;
 }
+
+.disabled-cursor{
+	cursor: not-allowed;
+}

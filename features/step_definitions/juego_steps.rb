@@ -20,7 +20,7 @@ end
 Given(/^la palabra seleccionada es 'ONOMATOPEYA'$/) do
   @ahogado = Ahogado.new
   @ahogado.set_palabra "ONOMATOPEYA"
-  expect(@ahogado.get_palabra).to eq("ONOMATOPEYA")
+  #expect(@ahogado.get_palabra).to eq("ONOMATOPEYA")
 end
 
 When(/^ingreso la letra 'A'$/) do

@@ -73,7 +73,9 @@ describe 'ahogado' do
   end
 
   it "dado que mis intentos son 0 se muestra mensaje 'PERDISTE' " do
+    # dadp que
     @ahogado.set_palabra "GATO"
+    # when
     @ahogado.procesar_letra "Z"
     @ahogado.procesar_letra "X"
     @ahogado.procesar_letra "C"
@@ -82,6 +84,7 @@ describe 'ahogado' do
     @ahogado.procesar_letra "N"
     @ahogado.procesar_letra "E"
     @ahogado.procesar_letra "Q"
+    # then
     expect(@ahogado.mostrar_mensaje).to eq("PERDISTE")
   end
 

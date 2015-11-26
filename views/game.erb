@@ -11,7 +11,7 @@
 		<h3>Intentos restantes: <%= @@ahogado.get_intentos %></h3>
 		<br>
 
-		<%=@@ahogado.mostrar_mensaje%>
+		<%= @@ahogado.mostrar_mensaje%>
 		<br><br><br>
 		<% if @acabo %>
 			<a class="btn btn-success btn-lg" href="/">Ir a Pagina Principal</a>
@@ -21,7 +21,7 @@
 
 	<div class="col-md-7">
 		<center>
-			<img src="images/jar.png">
+			<img src="/images/jar.png">
 		</center>
 		<br>
 		<br>
@@ -30,14 +30,12 @@
 
 	<div class="col-md-6">
 
-
 	<% unless @acabo %>
-	  <% @@abecedario.each do |letra|  %>
-		  <% style = 'btn btn-lg btn-default'; if letra[1] then style += ' disabled' end %>
-		  <a href="<%= letra[0] %>" class="<%= style %>"><%= letra[0] %></a>
+	  <% @@abecedario.each do |letra| %>
+		  <% style = 'btn btn-lg btn-default'; if letra[1] then style += ' disabled disabled-cursor' end %>
+		  <a href="<%= letra[0] %>" style="height: 48px; width: 48px;" class="<%= style %>"> <%= letra[0] %></a>
 	  <% end %>
 	<%end%>
-
 
 	</div>
 
