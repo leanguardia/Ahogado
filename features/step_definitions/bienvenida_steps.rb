@@ -23,3 +23,4 @@ end
 Then(/^deberia mostrarse una imagen atractiva propia del juego "([^"]*)"$/) do |img|
   expect(last_response.body) =~/#{img}/m
 end
+  
