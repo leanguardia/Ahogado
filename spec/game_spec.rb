@@ -100,6 +100,12 @@ describe 'ahogado' do
     expect(@ahogado.puntaje).to eq(50)
   end
 
+  it 'should raise score to 25 when made a right guess' do
+    @ahogado.set_palabra 'PERRO'
+    @ahogado.procesar_letra 'P'
+    expect(@ahogado.puntaje).to eq(25)
+  end
+
   it 'should reset score to 0 when a new word is set' do
     @ahogado.aumentar_puntaje
     @ahogado.aumentar_puntaje

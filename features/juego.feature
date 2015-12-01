@@ -88,6 +88,7 @@ Feature: Juego
     And hago click en el link "D"
     Then deberia mostrarse "BIEN" en la etiqueta "mensajeLetra"
     And deberia mostrarse "_ A _ A D A" en la etiqueta "palabra"
+    And deberia mostrarse "50" en la etiqueta "h3" llamada "puntaje"
 
   Scenario: Al escoger una letra incorrecta se deberia
     Given estando en la pantalla de jugar
@@ -108,3 +109,7 @@ Feature: Juego
     And la palabra seleccionada fue "CHILE"
     When hago click en los links "X W R T Y U O P"
     Then deberia mostrarse "PERDISTE" en la etiqueta "mensajeLetra"
+
+  Scenario: Deberia iniciarse el jeugo con puntaje con 0
+    Given estando en la pantalla de jugar
+    Then deberia mostrarse "0" en la etiqueta "h3" llamada "puntaje"

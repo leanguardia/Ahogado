@@ -74,6 +74,7 @@ class Ahogado
   def procesar_letra letra
     if coincide letra
       @mensaje = 'BIEN'
+      aumentar_puntaje
   	else
   		perder_intento
       @mensaje = 'MAL'
