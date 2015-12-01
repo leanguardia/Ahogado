@@ -8,7 +8,7 @@
 	<div class="col-md-5">
 		<h1>INFO</h1>
 		<br>
-		<h3>Intentos restantes: <%= @@ahogado.get_intentos %></h3>
+		<h3 id="intentos">Intentos restantes: <%= @@ahogado.get_intentos %></h3>
 		<br>
 
 		<h1 id="mensajeLetra"><%= @@ahogado.mostrar_mensaje%></h1>
@@ -22,7 +22,7 @@
 
 	<div class="col-md-7">
 		<center>
-			<img src="/images/jar.png">
+		  	<img src="/images/Girraffe/GirrafeJar(<%= @@ahogado.get_intentos.to_s %>).png">
 		</center>
 		<br>
 		<br>
@@ -45,9 +45,9 @@
 
 
   	<div class="col-md-6" id="piscina-del-olvido">
-	  <h3 style="display: inline">Piscina del olvido</h3><sup>(Letras ya utilizadas)</sup>
 	  <br><br>
 	  <% unless @acabo %>
+		  <h3 style="display: inline">Piscina del olvido</h3><sup>(Letras ya utilizadas)</sup><br><br>
 		  <% @@abecedario.each_with_index do |letra, index| %>
 			  <% if letra[1] %>
 				  <a href="/<%= letra[0] %>" id="<%= letra[0].to_s + 'Olvidada' %>" style="height: 48px; width: 48px;" class="btn btn-lg btn-danger disabled disabled-cursor"> <%= letra[0] %></a>

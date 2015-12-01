@@ -15,6 +15,3 @@ class WordReader
   end
 
 end
-
-
-puts WordReader.new.get_word
