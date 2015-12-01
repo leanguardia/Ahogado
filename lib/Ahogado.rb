@@ -1,11 +1,15 @@
 class Ahogado
 
+  attr_accessor :puntaje
+
   @palabra
   @letras
   @intentos
   @mensaje
+  @puntaje
 
   def initialize
+    @puntaje = 0
     @intentos = 8
   end
 
@@ -14,6 +18,7 @@ class Ahogado
   end
 
   def set_palabra palabra
+    @puntaje = 0
     @palabra = palabra
     set_letras
   end
@@ -82,6 +87,10 @@ class Ahogado
 
   def perder_intento
     @intentos -= 1
+  end
+
+  def aumentar_puntaje
+    @puntaje += 25
   end
 
 end

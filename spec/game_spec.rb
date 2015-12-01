@@ -84,6 +84,28 @@ describe 'ahogado' do
     expect(@ahogado.mostrar_mensaje).to eq('PERDISTE')
   end
 
-  
+
+  it 'should initialize with score 0' do
+    expect(@ahogado.puntaje).to eq(0)
+  end
+
+  it 'should raise score to 25' do
+    @ahogado.aumentar_puntaje
+    expect(@ahogado.puntaje).to eq(25)
+  end
+
+  it 'should raise score to 50' do
+    @ahogado.aumentar_puntaje
+    @ahogado.aumentar_puntaje
+    expect(@ahogado.puntaje).to eq(50)
+  end
+
+  it 'should reset score to 0 when a new word is set' do
+    @ahogado.aumentar_puntaje
+    @ahogado.aumentar_puntaje
+    expect(@ahogado.puntaje).to eq(50)
+    @ahogado.set_palabra 'PERRO'
+    expect(@ahogado.puntaje).to eq(0)
+  end
 
 end
