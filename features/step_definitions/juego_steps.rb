@@ -4,39 +4,16 @@ Given(/^estando en la pantalla de jugar$/) do
   visit '/game'
 end
 
-Then(/^deberia mostrarse una imagen inicial del ahogado "([^"]*)"$/) do |img|
-  expect(last_response.body) =~/#{img}/m
-end
-
-Then(/^deberia mostrarse un conjunto de "([^"]*)" que represente las letras de la palabra que tengo que elegir$/) do |underscore|
-  expect(last_response.body) =~/#{underscore}/m
-end
-
-Then(/^deberia mostrar (\d+) intentos$/) do |intentos|
+Given(/^la palabra seleccionada fue "([^"]*)"$/) do |selected_word|
   @ahogado = Ahogado.new
-  expect(@ahogado.get_intentos).to eq(intentos.to_i)
-end
-
-Given(/^la palabra seleccionada es 'ONOMATOPEYA'$/) do
-  @ahogado = Ahogado.new
-  @ahogado.set_palabra "ONOMATOPEYA"
-  #expect(@ahogado.get_palabra).to eq("ONOMATOPEYA")
-end
-
-When(/^ingreso la letra 'A'$/) do
-  @ahogado = Ahogado.new
-  @ahogado.set_palabra "ONOMATOPEYA"
-  @ahogado.procesar_letra 'A'
-end
-
-Then(/^deberia mostrarse el boton "([^"]*)"$/) do |letra|
-  expect(last_response).to have_xpath("//a[@href=\"/#{letra}\"]")
-end
-
-When(/^hago click en el link "([^"]*)"$/) do |letra|
-  click_link(letra)
+   @ahogado.set_palabra selected_word
 end
 
 Then(/^deberia mostrar el boton "([^"]*)" en la piscina del olvido$/) do |letraOlvidada|
   expect(last_response).to have_xpath("//a[@id=\"#{letraOlvidada}\"]")
+end
+
+Then(/^deberia mostrarse "([^"]*)" en la etiqueta "([^"]*)"$/) do |underscores, label|
+  last_response.body.should =~ /#{underscores}/m
+  expect(last_response).to have_xpath("//h1[@id=\"#{label}\"]")
 end
