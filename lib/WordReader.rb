@@ -9,4 +9,9 @@ class WordReader
     end
     file.close
   end
+
+  def get_word
+    @words[rand(@words.size)]
+  end
+
 end
