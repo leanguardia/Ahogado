@@ -114,4 +114,20 @@ describe 'ahogado' do
     expect(@ahogado.puntaje).to eq(0)
   end
 
+  it 'should raise score to 100 when the word is guessed' do
+    @ahogado.set_palabra 'PE'
+    @ahogado.procesar_letra 'P'
+    @ahogado.procesar_letra 'E'
+    expect(@ahogado.puntaje).to eq(100)
+  end
+
+  it 'should raise score to 150 when the word is guessed' do
+    @ahogado.set_palabra 'PERRO'
+    @ahogado.procesar_letra 'P'
+    @ahogado.procesar_letra 'E'
+    @ahogado.procesar_letra 'R'
+    @ahogado.procesar_letra 'O'
+    expect(@ahogado.puntaje).to eq(150)
+  end
+
 end

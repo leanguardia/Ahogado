@@ -66,6 +66,7 @@ class Ahogado
     end
     if adivino?
       @mensaje = 'GANASTE'
+      @puntaje += 50
       return true
     end
     false

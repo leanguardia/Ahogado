@@ -17,6 +17,10 @@ Feature: Juego
     | "X Y Z Q T K N"    | "GirrafeJar(1)" |
     | "X Y Z Q T K N M"  | "GirrafeJar(0)" |
 
+  Scenario: Deberia iniciarse el juego con puntaje con 0
+    Given estando en la pantalla de jugar
+    Then deberia mostrarse "0" en la etiqueta "h3" llamada "puntaje"
+
   Scenario Outline: Iniciar juego
     Given estando en la pantalla de jugar
     And la palabra seleccionada fue <word>
@@ -109,7 +113,3 @@ Feature: Juego
     And la palabra seleccionada fue "CHILE"
     When hago click en los links "X W R T Y U O P"
     Then deberia mostrarse "PERDISTE" en la etiqueta "mensajeLetra"
-
-  Scenario: Deberia iniciarse el jeugo con puntaje con 0
-    Given estando en la pantalla de jugar
-    Then deberia mostrarse "0" en la etiqueta "h3" llamada "puntaje"
