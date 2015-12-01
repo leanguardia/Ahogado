@@ -2,6 +2,7 @@ require 'sinatra'
 require './lib/Ahogado'
 require './lib/WordReader'
 
+class App < Sinatra::Base
 	get '/' do
 		erb :main
 	end
@@ -31,3 +32,4 @@ require './lib/WordReader'
 		@acabo = @@ahogado.procesar_letra params[:letter]
 		erb :game
 	end
+end
