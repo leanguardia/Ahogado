@@ -2,11 +2,6 @@ require 'sinatra'
 require './lib/Ahogado'
 require './lib/WordReader'
 
-	def initialize
-		@@abecedario
-		@@ahogado
-	end
-
 	get '/' do
 		erb :main
 	end
