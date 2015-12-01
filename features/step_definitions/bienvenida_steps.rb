@@ -18,7 +18,6 @@ end
 
 Then(/^deberia mostrarme la pantalla de juego$/) do
   visit '/game'
-#
 end
 
 Then(/^deberia mostrarse una imagen atractiva propia del juego "([^"]*)"$/) do |img|
