@@ -10,13 +10,9 @@ describe 'ahogado' do
     expect(@ahogado.get_intentos).to eq(8)
   end
 
-  it 'dado el inicio de un juego se debe seleccionar una palabra aleatoriamente' do
-    expect(@ahogado.seleccionar_palabra).not_to eq(nil)
-  end
-
-  it "dado el inicio del juego la palabra elegida es 'ONOMATOPEYA'" do
-    @ahogado.seleccionar_palabra
-    expect(@ahogado.get_palabra).to eq('ONOMATOPEYA')
+  it 'dado el inicio de un juego se debe elegir una palabra' do
+    @ahogado.set_palabra 'PALABRA'
+    expect(@ahogado.get_palabra).not_to eq(nil)
   end
 
   it "dada la palabra 'PERRO' elegida, se debe mostrar '_____'" do

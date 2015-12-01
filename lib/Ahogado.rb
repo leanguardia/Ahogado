@@ -27,11 +27,6 @@ class Ahogado
     @letras = @palabra.gsub(er,'_')
   end
 
-  # def seleccionar_palabra
-  #   @palabra = 'ONOMATOPEYA'
-  #   set_letras
-  # end
-
   def mostrar
     @letras
   end
