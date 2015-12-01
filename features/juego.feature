@@ -1,18 +1,18 @@
 Feature: Juego
-  Scenario Outline: Iniciar juego
-    Given estando en la pantalla de jugar
-    And la palabra seleccionada fue <word>
-    Then deberia mostrarse <underscores> en la etiqueta "palabra"
-
-    Examples:
-      |word|underscores|
-      |"DINOSAURIO"|"_ _ _ _ _ _ _ _ _ _"|
-      |"DORMIR"|"_ _ _ _ _ _"|
-      |"ONOMATOPEYA"|"_ _ _ _ _ _ _ _ _ _ _"|
-      |"PALABRA"|"_ _ _ _ _ _ _"|
-      |"TAREA"|"_ _ _ _ _"|
-      |"BRASIL"|"_ _ _ _ _"|
-      |"PAT"|"_ _ _"|
+#  Scenario Outline: Iniciar juego
+#    Given estando en la pantalla de jugar
+#    And la palabra seleccionada fue <word>
+#    Then deberia mostrarse <underscores> en la etiqueta "palabra"
+#
+#    Examples:
+#      |       word          |        underscores        |
+#      |    "DINOSAURIO"     |  "_ _ _ _ _ _ _ _ _ _"    |
+#      |    "DORMIR"         |  "_ _ _ _ _ _"            |
+#      |    "ONOMATOPEYA"    |  "_ _ _ _ _ _ _ _ _ _ _"  |
+#      |    "PALABRA"        |  "_ _ _ _ _ _ _"          |
+#      |    "TAREA"          |  "_ _ _ _ _"              |
+#      |    "BRASIL"         |  "_ _ _ _ _"              |
+#      |    "PAT"            |  "_ _ _"                  |
 
 
   Scenario Outline: Ver letras de juego
@@ -63,3 +63,11 @@ Feature: Juego
           |   "X"   |   "XOlvidada"   |
           |   "Y"   |   "YOlvidada"   |
           |   "Z"   |   "ZOlvidada"   |
+
+#  Scenario: Al escoger letras correctas deberian mostrarse
+#    Given estando en la pantalla de jugar
+#    And la palabra seleccionada fue "CANADA"
+#    When hago click en el link "A"
+#    Then deberia mostrarse "BIEN" en la etiqueta "mensajeLetra"
+#    And deberia mostrarse "_ A _ A _ A" en la etiqueta "palabra"
+

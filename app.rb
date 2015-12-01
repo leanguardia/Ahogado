@@ -1,5 +1,6 @@
 require 'sinatra'
 require './lib/Ahogado'
+require './lib/WordReader'
 
 	get '/' do
 		erb :main
@@ -12,7 +13,7 @@ require './lib/Ahogado'
 			@@abecedario[letra.to_sym] = false
 		end
 		@@ahogado = Ahogado.new
-		@@ahogado.seleccionar_palabra
+		@@ahogado.set_palabra(WordReader.new.get_word)
 		erb :game
 	end
 

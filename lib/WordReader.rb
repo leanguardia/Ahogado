@@ -11,7 +11,10 @@ class WordReader
   end
 
   def get_word
-    @words[rand(@words.size)]
+    @words[rand(@words.size)].upcase
   end
 
 end
+
+
+puts WordReader.new.get_word
