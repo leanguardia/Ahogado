@@ -28,15 +28,35 @@
 		<br>
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-md-6" id="letras-disponibles" style="margin-bottom: 20px;">
+		<% unless @acabo %>
+		  <% @@abecedario.each_with_index do |letra, index| %>
+			  <% unless letra[1] %>
+				  <a href="/<%= letra[0] %>" id="<%= letra[0].to_s %>" style="height: 48px; width: 48px;" class="btn btn-lg btn-info"> <%= letra[0] %></a>
+			  <% end %>
+			  <% if (index + 1)%6 == 0 %>
+			  	<br><br>
+			  <% end %>
+		  <% end %>
+		<%end%>
+	</div>
 
-	<% unless @acabo %>
-	  <% @@abecedario.each do |letra| %>
-		  <% style = 'btn btn-lg btn-default'; if letra[1] then style += ' disabled disabled-cursor' end %>
-		  <a href="<%= letra[0] %>" style="height: 48px; width: 48px;" class="<%= style %>"> <%= letra[0] %></a>
-	  <% end %>
-	<%end%>
 
+
+  	<div class="col-md-6" id="piscina-del-olvido">
+	  <h3 style="display: inline">Piscina del olvido</h3><sup>(Letras ya utilizadas)</sup><h3 style="display: inline">:</h3>
+	  <br><br>
+	  <% unless @acabo %>
+		  <% @@abecedario.each_with_index do |letra, index| %>
+			  <% if letra[1] %>
+				  <a href="/<%= letra[0] %>" id="<%= letra[0].to_s + 'Olvidada' %>" style="height: 48px; width: 48px;" class="btn btn-lg btn-info disabled disabled-cursor"> <%= letra[0] %></a>
+			  <% end %>
+
+			  <% if (index + 1)%6 == 0 %>
+				  <br><br>
+			  <% end %>
+		  <% end %>
+	  <%end%>
 	</div>
 
 	<div class="col-md-1"></div>

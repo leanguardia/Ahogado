@@ -44,3 +44,19 @@ Feature: Juego
       |   "X"   |
       |   "Y"   |
       |   "Z"   |
+
+  Scenario Outline:
+    Given estando en la pantalla de jugar
+    When hago click en el link <letra>
+    Then deberia mostrar el boton <letraOlvidada> en la piscina del olvido
+
+    Examples:
+      |  letra  |  letraOlvidada  |
+      |   "A"   |   "AOlvidada"   |
+      |   "E"   |   "EOlvidada"   |
+      |   "F"   |   "FOlvidada"   |
+      |   "G"   |   "GOlvidada"   |
+      |   "W"   |   "WOlvidada"   |
+      |   "X"   |   "XOlvidada"   |
+      |   "Y"   |   "YOlvidada"   |
+      |   "Z"   |   "ZOlvidada"   |
