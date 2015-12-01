@@ -45,7 +45,7 @@ Feature: Juego
       |   "Y"   |
       |   "Z"   |
 
-  Scenario Outline:
+  Scenario Outline: Letras escogidas se van a la piscina del olvido
     Given estando en la pantalla de jugar
     When hago click en el link <letra>
     Then deberia mostrar el boton <letraOlvidada> en la piscina del olvido
