@@ -3,6 +3,12 @@ require './lib/Ahogado'
 require './lib/WordReader'
 
 class App < Sinatra::Base
+
+	def initialize
+		@@abecedario
+		@@ahogado
+	end
+
 	get '/' do
 		erb :main
 	end
